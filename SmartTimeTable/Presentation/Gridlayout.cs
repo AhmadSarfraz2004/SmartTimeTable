@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using SmartTimeTable.Business;
 using SmartTimeTable.Data;
 using FormsTimer = System.Windows.Forms.Timer;
 
@@ -13,6 +14,7 @@ namespace SmartTimeTable.Presentation
     {
         private FormsTimer _checkTimer;
 
+        //Regex for adding yellow colour to lecture
         private static readonly Regex EndTimeRx =
       new Regex(@"EndTime:\s*(\d{1,2}):(\d{2})", RegexOptions.Compiled);
         public Gridlayout()
@@ -22,8 +24,25 @@ namespace SmartTimeTable.Presentation
 
         private void Gridlayout_Load(object sender, EventArgs e)
         {
-            DataTable dt = Connection.GetTimeTableGrid();
 
+            if (Session.CurrentUser == null)
+            {
+                MessageBox.Show(
+                  "No user is logged in. Please login first.",
+                  "Session Missing",
+                  MessageBoxButtons.OK,
+                  MessageBoxIcon.Warning
+                );
+                Close();
+                return;
+            }
+
+            bool isTeacher = Session.CurrentUser.Role
+                                .Equals("Teacher", StringComparison.OrdinalIgnoreCase);
+
+            DataTable dt = isTeacher
+                ? Connection.GetTeacherTimeTable()
+                : Connection.GetStudentTimeTable();
             dgvTimeTable.DataSource = dt;
             dgvTimeTable.AutoGenerateColumns = true;
             dgvTimeTable.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -43,7 +62,7 @@ namespace SmartTimeTable.Presentation
             dgvTimeTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvTimeTable.DefaultCellStyle.WrapMode = DataGridViewTriState.True; dgvTimeTable.ColumnHeadersDefaultCellStyle.Font =
                 new Font("Segoe UI", 9f, FontStyle.Bold);
-
+            //using beep method in load to work.
             // 2) Set up the timer to fire every second
             _checkTimer = new FormsTimer
             {
@@ -53,6 +72,7 @@ namespace SmartTimeTable.Presentation
             _checkTimer.Tick += CheckTimer_Tick;
         }
 
+        // beeep method??  yes 
         private void CheckTimer_Tick(object sender, EventArgs e)
         {
             var now = DateTime.Now;
@@ -79,7 +99,7 @@ namespace SmartTimeTable.Presentation
                     if (h == curH && mnt == curM)
                     {
                         row.Cells[lecCol].Style.BackColor = Color.Yellow;
-                        Console.Beep(800, 300);
+                        Console.Beep(800, 300);   // here is beeping????Yes ok
                         return;
                     }
                 }

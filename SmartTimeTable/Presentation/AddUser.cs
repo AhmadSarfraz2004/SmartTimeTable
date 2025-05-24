@@ -90,5 +90,15 @@ namespace SmartTimeTable.Presentation
             this.Hide();
             new Timetable().Show();
         }
+
+        private void TxtDepartment_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DtpDOB_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

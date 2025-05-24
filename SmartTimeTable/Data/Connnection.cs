@@ -11,8 +11,9 @@ namespace SmartTimeTable.Data
 {
     public static class Connection
     {
-        private static readonly string connectionString = "Data Source=DESKTOP-ADPH47V\\SQLEXPRESS;Initial Catalog=SmartTimeTable;Integrated Security=True;Encrypt=False";
 
+        private static readonly string connectionString = "Data Source=DESKTOP-ADPH47V\\SQLEXPRESS;Initial Catalog=SmartTimeTable;Integrated Security=True;Encrypt=False";
+        #region Methods
         public static SqlConnection GetConnection()
         {
             try
@@ -123,11 +124,11 @@ namespace SmartTimeTable.Data
                 {
                     // Insert into Users table, auto-generating ID
                     string userQuery = @"
-                INSERT INTO Users 
-                (FirstName, LastName, UserName, Email, Department, Role, Password, DateOfBirth)
-                OUTPUT INSERTED.Id
-                VALUES 
-                (@FirstName, @LastName, @UserName, @Email, @Department, @Role, @Password, @DateOfBirth);";
+                    INSERT INTO Users 
+                    (FirstName, LastName, UserName, Email, Department, Role, Password, DateOfBirth)
+                    OUTPUT INSERTED.Id
+                    VALUES 
+                    (@FirstName, @LastName, @UserName, @Email, @Department, @Role, @Password, @DateOfBirth);";
 
                     using (SqlCommand userCmd = new SqlCommand(userQuery, conn, transaction))
                     {
@@ -177,9 +178,9 @@ namespace SmartTimeTable.Data
             {
                 cmd.CommandText = @"
                 SELECT 
-                  Id,
-                  FirstName + ' ' + LastName AS FullName,
-                  Department
+                Id,
+                FirstName + ' ' + LastName AS FullName,
+                Department
                 FROM Users
                 WHERE Role = 'Teacher'
                 ORDER BY FirstName, LastName;";
@@ -293,17 +294,17 @@ namespace SmartTimeTable.Data
             return dt;
         }
 
-        public static DataTable GetTimeTableGrid()
+        public static DataTable GetStudentTimeTable()
         {
             var dt = new DataTable();
-            // 1) Create the columns: the first column is the day name ("SR#"),
-            //    then one column per lecture slot.
+            // Create the columns: the first column is the day name ("SR#"),
+            // then one column per lecture slot.
             dt.Columns.Add("SR#", typeof(string));
             var lectures = new[] { "1st", "2nd", "3rd", "4th", "5th", "6th" };
             foreach (var lec in lectures)
                 dt.Columns.Add(lec, typeof(string));
 
-            // 2) Seed one row per weekday:
+            // Seed one row per weekday:
             var days = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
             foreach (var day in days)
             {
@@ -312,7 +313,7 @@ namespace SmartTimeTable.Data
                 dt.Rows.Add(row);
             }
 
-            // 3) Load every entry from TimeTables and slot it
+            // Load every entry from TimeTables and slot it
             using (var conn = GetConnection())
             using (var cmd = conn.CreateCommand())
             {
@@ -337,12 +338,11 @@ namespace SmartTimeTable.Data
                             $"Course Name: {courseName}\r\n" +
                             $"Room: {room}\r\n" +
                             $"StartTime: {start:h\\:mm}\r\n " +
-                            $"EndTime: {end:h\\:mm}\r\n" +
-                            $"Teacher: {teacher}";
+                            $"EndTime: {end:h\\:mm}\rTeacher: {teacher}";
 
-                        // find the row for this day
+                        // Find the row for this day
                         var found = dt.Rows.Cast<DataRow>()
-                                      .FirstOrDefault(r => r["SR#"].ToString() == day);
+                                          .FirstOrDefault(r => r["SR#"].ToString() == day);
                         if (found != null && dt.Columns.Contains(lecture))
                         {
                             found[lecture] = info;
@@ -354,5 +354,65 @@ namespace SmartTimeTable.Data
             return dt;
         }
 
+        public static DataTable GetTeacherTimeTable()
+        {
+            var dt = new DataTable();
+            // Create the columns: the first column is the day name ("SR#"),
+            // then one column per lecture slot.
+            dt.Columns.Add("SR#", typeof(string));
+            var lectures = new[] { "1st", "2nd", "3rd", "4th", "5th", "6th" };
+            foreach (var lec in lectures)
+                dt.Columns.Add(lec, typeof(string));
+
+            // Seed one row per weekday:
+            var days = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+            foreach (var day in days)
+            {
+                var row = dt.NewRow();
+                row["SR#"] = day;
+                dt.Rows.Add(row);
+            }
+
+            // Load every entry from TimeTables and slot it
+            using (var conn = GetConnection())
+            using (var cmd = conn.CreateCommand())
+            {
+                cmd.CommandText = @"
+            SELECT Day, Lecture, CourseCode, CourseName, RoomNumber, StartTime, EndTime, TeacherName
+            FROM TimeTables;";
+                using (var rdr = cmd.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        string day = rdr.GetString(rdr.GetOrdinal("Day"));
+                        string lecture = rdr.GetString(rdr.GetOrdinal("Lecture"));
+                        string courseCode = rdr.GetString(rdr.GetOrdinal("CourseCode"));
+                        string courseName = rdr.GetString(rdr.GetOrdinal("CourseName"));
+                        int room = rdr.GetInt32(rdr.GetOrdinal("RoomNumber"));
+                        TimeSpan start = rdr.GetTimeSpan(rdr.GetOrdinal("StartTime"));
+                        TimeSpan end = rdr.GetTimeSpan(rdr.GetOrdinal("EndTime"));
+
+                        string info =
+                            $"Course Code: {courseCode}\r\n" +
+                            $"Course Name: {courseName}\r\n" +
+                            $"Room: {room}\r\n" +
+                            $"StartTime: {start:h\\:mm}\r\n " +
+                            $"EndTime: {end:h\\:mm}\r\n";
+
+                        // Find the row for this day
+                        var found = dt.Rows.Cast<DataRow>()
+                                          .FirstOrDefault(r => r["SR#"].ToString() == day);
+                        if (found != null && dt.Columns.Contains(lecture))
+                        {
+                            found[lecture] = info;
+                        }
+                    }
+                }
+            }
+
+            return dt;
+        }
+
+        #endregion
     }
 }

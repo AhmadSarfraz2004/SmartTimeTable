@@ -39,10 +39,9 @@
             LblCross.AutoSize = true;
             LblCross.BackColor = Color.Red;
             LblCross.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LblCross.Location = new Point(1540, 9);
-            LblCross.Margin = new Padding(4, 0, 4, 0);
+            LblCross.Location = new Point(1078, 5);
             LblCross.Name = "LblCross";
-            LblCross.Size = new Size(28, 32);
+            LblCross.Size = new Size(19, 21);
             LblCross.TabIndex = 2;
             LblCross.Text = "X";
             LblCross.Click += LblCross_Click;
@@ -54,9 +53,10 @@
             dgvTimeTable.Dock = DockStyle.Fill;
             dgvTimeTable.GridColor = Color.DimGray;
             dgvTimeTable.Location = new Point(0, 0);
+            dgvTimeTable.Margin = new Padding(2, 2, 2, 2);
             dgvTimeTable.Name = "dgvTimeTable";
             dgvTimeTable.RowHeadersWidth = 62;
-            dgvTimeTable.Size = new Size(1581, 862);
+            dgvTimeTable.Size = new Size(1107, 586);
             dgvTimeTable.TabIndex = 3;
             dgvTimeTable.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -65,24 +65,24 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Red;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(1542, 8);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(1079, 5);
             label1.Name = "label1";
-            label1.Size = new Size(28, 32);
+            label1.Size = new Size(19, 21);
             label1.TabIndex = 14;
             label1.Text = "X";
             label1.Click += label1_Click;
             // 
             // Gridlayout
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1581, 862);
+            ClientSize = new Size(1107, 586);
             Controls.Add(label1);
             Controls.Add(dgvTimeTable);
             Controls.Add(LblCross);
+            Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Gridlayout";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gridlayout";

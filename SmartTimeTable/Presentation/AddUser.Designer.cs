@@ -60,22 +60,20 @@
             LBLaddTeacher.AutoSize = true;
             LBLaddTeacher.Font = new Font("Nirmala UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLaddTeacher.ForeColor = Color.FromArgb(116, 86, 174);
-            LBLaddTeacher.Location = new Point(631, 26);
-            LBLaddTeacher.Margin = new Padding(4, 0, 4, 0);
+            LBLaddTeacher.Location = new Point(505, 21);
             LBLaddTeacher.Name = "LBLaddTeacher";
-            LBLaddTeacher.Size = new Size(278, 76);
+            LBLaddTeacher.Size = new Size(230, 62);
             LBLaddTeacher.TabIndex = 0;
             LBLaddTeacher.Text = "Add User";
             // 
             // TxtLastName
             // 
             TxtLastName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtLastName.Font = new Font("MS UI Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxtLastName.Location = new Point(446, 172);
-            TxtLastName.Margin = new Padding(4);
+            TxtLastName.Font = new Font("Nirmala UI", 14.25F);
+            TxtLastName.Location = new Point(357, 137);
             TxtLastName.Multiline = true;
             TxtLastName.Name = "TxtLastName";
-            TxtLastName.Size = new Size(295, 45);
+            TxtLastName.Size = new Size(237, 37);
             TxtLastName.TabIndex = 20;
             // 
             // lblLastName
@@ -84,10 +82,9 @@
             lblLastName.AutoSize = true;
             lblLastName.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLastName.ForeColor = Color.Gray;
-            lblLastName.Location = new Point(441, 130);
-            lblLastName.Margin = new Padding(4, 0, 4, 0);
+            lblLastName.Location = new Point(353, 104);
             lblLastName.Name = "lblLastName";
-            lblLastName.Size = new Size(133, 32);
+            lblLastName.Size = new Size(112, 28);
             lblLastName.TabIndex = 0;
             lblLastName.Text = "Last Name";
             lblLastName.TextAlign = ContentAlignment.MiddleCenter;
@@ -95,12 +92,11 @@
             // TxtFirstName
             // 
             TxtFirstName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtFirstName.Font = new Font("MS UI Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxtFirstName.Location = new Point(46, 172);
-            TxtFirstName.Margin = new Padding(4);
+            TxtFirstName.Font = new Font("Nirmala UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TxtFirstName.Location = new Point(37, 137);
             TxtFirstName.Multiline = true;
             TxtFirstName.Name = "TxtFirstName";
-            TxtFirstName.Size = new Size(295, 45);
+            TxtFirstName.Size = new Size(237, 37);
             TxtFirstName.TabIndex = 19;
             // 
             // lblFirstName
@@ -109,22 +105,20 @@
             lblFirstName.AutoSize = true;
             lblFirstName.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblFirstName.ForeColor = Color.Gray;
-            lblFirstName.Location = new Point(41, 130);
-            lblFirstName.Margin = new Padding(4, 0, 4, 0);
+            lblFirstName.Location = new Point(33, 104);
             lblFirstName.Name = "lblFirstName";
-            lblFirstName.Size = new Size(137, 32);
+            lblFirstName.Size = new Size(115, 28);
             lblFirstName.TabIndex = 0;
             lblFirstName.Text = "First Name";
             // 
             // TxtUserName
             // 
             TxtUserName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtUserName.Font = new Font("MS UI Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxtUserName.Location = new Point(46, 289);
-            TxtUserName.Margin = new Padding(4);
+            TxtUserName.Font = new Font("Nirmala UI", 14.25F);
+            TxtUserName.Location = new Point(37, 231);
             TxtUserName.Multiline = true;
             TxtUserName.Name = "TxtUserName";
-            TxtUserName.Size = new Size(695, 45);
+            TxtUserName.Size = new Size(557, 37);
             TxtUserName.TabIndex = 23;
             // 
             // lblUserName
@@ -133,22 +127,20 @@
             lblUserName.AutoSize = true;
             lblUserName.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUserName.ForeColor = Color.Gray;
-            lblUserName.Location = new Point(41, 248);
-            lblUserName.Margin = new Padding(4, 0, 4, 0);
+            lblUserName.Location = new Point(33, 199);
             lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(139, 32);
+            lblUserName.Size = new Size(116, 28);
             lblUserName.TabIndex = 0;
             lblUserName.Text = "User Name";
             // 
             // TxtEmail
             // 
             TxtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtEmail.Font = new Font("MS UI Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxtEmail.Location = new Point(48, 431);
-            TxtEmail.Margin = new Padding(4);
+            TxtEmail.Font = new Font("Nirmala UI", 14.25F);
+            TxtEmail.Location = new Point(39, 345);
             TxtEmail.Multiline = true;
             TxtEmail.Name = "TxtEmail";
-            TxtEmail.Size = new Size(1102, 45);
+            TxtEmail.Size = new Size(883, 37);
             TxtEmail.TabIndex = 25;
             // 
             // Email
@@ -157,23 +149,22 @@
             Email.AutoSize = true;
             Email.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Email.ForeColor = Color.Gray;
-            Email.Location = new Point(42, 389);
-            Email.Margin = new Padding(4, 0, 4, 0);
+            Email.Location = new Point(33, 311);
             Email.Name = "Email";
-            Email.Size = new Size(76, 32);
+            Email.Size = new Size(64, 28);
             Email.TabIndex = 0;
             Email.Text = "Email";
             // 
             // TxtDepartment
             // 
             TxtDepartment.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtDepartment.Font = new Font("MS UI Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxtDepartment.Location = new Point(1241, 172);
-            TxtDepartment.Margin = new Padding(4);
+            TxtDepartment.Font = new Font("Nirmala UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            TxtDepartment.Location = new Point(993, 137);
             TxtDepartment.Multiline = true;
             TxtDepartment.Name = "TxtDepartment";
-            TxtDepartment.Size = new Size(295, 45);
+            TxtDepartment.Size = new Size(237, 37);
             TxtDepartment.TabIndex = 22;
+            TxtDepartment.TextChanged += TxtDepartment_TextChanged;
             // 
             // Department
             // 
@@ -181,21 +172,21 @@
             Department.AutoSize = true;
             Department.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Department.ForeColor = Color.Gray;
-            Department.Location = new Point(1241, 130);
-            Department.Margin = new Padding(4, 0, 4, 0);
+            Department.Location = new Point(993, 104);
             Department.Name = "Department";
-            Department.Size = new Size(152, 32);
+            Department.Size = new Size(127, 28);
             Department.TabIndex = 0;
             Department.Text = "Department";
             // 
             // CmbRole
             // 
+            CmbRole.Font = new Font("Nirmala UI", 14.25F);
             CmbRole.FormattingEnabled = true;
             CmbRole.Items.AddRange(new object[] { "Teacher", "Student" });
-            CmbRole.Location = new Point(879, 172);
-            CmbRole.Margin = new Padding(2);
+            CmbRole.Location = new Point(703, 137);
+            CmbRole.Margin = new Padding(1);
             CmbRole.Name = "CmbRole";
-            CmbRole.Size = new Size(245, 33);
+            CmbRole.Size = new Size(197, 40);
             CmbRole.TabIndex = 21;
             // 
             // Role
@@ -204,21 +195,21 @@
             Role.AutoSize = true;
             Role.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Role.ForeColor = Color.Gray;
-            Role.Location = new Point(879, 130);
-            Role.Margin = new Padding(4, 0, 4, 0);
+            Role.Location = new Point(703, 104);
             Role.Name = "Role";
-            Role.Size = new Size(64, 32);
+            Role.Size = new Size(53, 28);
             Role.TabIndex = 0;
             Role.Text = "Role";
             Role.Click += Role_Click;
             // 
             // DtpDOB
             // 
-            DtpDOB.Location = new Point(879, 302);
-            DtpDOB.Margin = new Padding(4);
+            DtpDOB.Font = new Font("Nirmala UI", 14.25F);
+            DtpDOB.Location = new Point(703, 241);
             DtpDOB.Name = "DtpDOB";
-            DtpDOB.Size = new Size(656, 31);
+            DtpDOB.Size = new Size(525, 39);
             DtpDOB.TabIndex = 24;
+            DtpDOB.ValueChanged += DtpDOB_ValueChanged;
             // 
             // lblDOB
             // 
@@ -226,10 +217,9 @@
             lblDOB.AutoSize = true;
             lblDOB.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblDOB.ForeColor = Color.Gray;
-            lblDOB.Location = new Point(872, 258);
-            lblDOB.Margin = new Padding(4, 0, 4, 0);
+            lblDOB.Location = new Point(697, 207);
             lblDOB.Name = "lblDOB";
-            lblDOB.Size = new Size(161, 32);
+            lblDOB.Size = new Size(137, 28);
             lblDOB.TabIndex = 0;
             lblDOB.Text = "Date of Birth";
             // 
@@ -240,10 +230,9 @@
             BtnClear.FlatStyle = FlatStyle.Flat;
             BtnClear.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnClear.ForeColor = Color.FromArgb(116, 86, 174);
-            BtnClear.Location = new Point(1291, 659);
-            BtnClear.Margin = new Padding(4);
+            BtnClear.Location = new Point(1033, 527);
             BtnClear.Name = "BtnClear";
-            BtnClear.Size = new Size(258, 72);
+            BtnClear.Size = new Size(207, 57);
             BtnClear.TabIndex = 29;
             BtnClear.Text = "CLEAR";
             BtnClear.UseVisualStyleBackColor = false;
@@ -256,10 +245,9 @@
             BtnADD.FlatStyle = FlatStyle.Flat;
             BtnADD.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnADD.ForeColor = Color.White;
-            BtnADD.Location = new Point(972, 659);
-            BtnADD.Margin = new Padding(4);
+            BtnADD.Location = new Point(777, 527);
             BtnADD.Name = "BtnADD";
-            BtnADD.Size = new Size(258, 72);
+            BtnADD.Size = new Size(207, 57);
             BtnADD.TabIndex = 28;
             BtnADD.Text = "ADD";
             BtnADD.UseVisualStyleBackColor = false;
@@ -268,13 +256,12 @@
             // TxtConfirmPassword
             // 
             TxtConfirmPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtConfirmPassword.Font = new Font("MS UI Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxtConfirmPassword.Location = new Point(859, 556);
-            TxtConfirmPassword.Margin = new Padding(4);
+            TxtConfirmPassword.Font = new Font("Nirmala UI", 14.25F);
+            TxtConfirmPassword.Location = new Point(687, 445);
             TxtConfirmPassword.Multiline = true;
             TxtConfirmPassword.Name = "TxtConfirmPassword";
             TxtConfirmPassword.PasswordChar = '*';
-            TxtConfirmPassword.Size = new Size(688, 45);
+            TxtConfirmPassword.Size = new Size(551, 37);
             TxtConfirmPassword.TabIndex = 27;
             // 
             // lblConfirmPassword
@@ -283,23 +270,21 @@
             lblConfirmPassword.AutoSize = true;
             lblConfirmPassword.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblConfirmPassword.ForeColor = Color.Gray;
-            lblConfirmPassword.Location = new Point(855, 514);
-            lblConfirmPassword.Margin = new Padding(4, 0, 4, 0);
+            lblConfirmPassword.Location = new Point(683, 411);
             lblConfirmPassword.Name = "lblConfirmPassword";
-            lblConfirmPassword.Size = new Size(222, 32);
+            lblConfirmPassword.Size = new Size(182, 28);
             lblConfirmPassword.TabIndex = 0;
             lblConfirmPassword.Text = "Confirm Password";
             // 
             // TxtPassword
             // 
             TxtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            TxtPassword.Font = new Font("MS UI Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TxtPassword.Location = new Point(48, 556);
-            TxtPassword.Margin = new Padding(4);
+            TxtPassword.Font = new Font("Nirmala UI", 14.25F);
+            TxtPassword.Location = new Point(39, 445);
             TxtPassword.Multiline = true;
             TxtPassword.Name = "TxtPassword";
             TxtPassword.PasswordChar = '*';
-            TxtPassword.Size = new Size(695, 45);
+            TxtPassword.Size = new Size(557, 37);
             TxtPassword.TabIndex = 26;
             // 
             // lblPassword
@@ -308,10 +293,9 @@
             lblPassword.AutoSize = true;
             lblPassword.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblPassword.ForeColor = Color.Gray;
-            lblPassword.Location = new Point(42, 514);
-            lblPassword.Margin = new Padding(4, 0, 4, 0);
+            lblPassword.Location = new Point(33, 411);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(122, 32);
+            lblPassword.Size = new Size(100, 28);
             lblPassword.TabIndex = 0;
             lblPassword.Text = "Password";
             // 
@@ -320,10 +304,9 @@
             LblCross.AutoSize = true;
             LblCross.BackColor = Color.Red;
             LblCross.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LblCross.Location = new Point(1532, 15);
-            LblCross.Margin = new Padding(4, 0, 4, 0);
+            LblCross.Location = new Point(1225, 12);
             LblCross.Name = "LblCross";
-            LblCross.Size = new Size(28, 32);
+            LblCross.Size = new Size(24, 28);
             LblCross.TabIndex = 0;
             LblCross.Text = "X";
             LblCross.Click += LblCross_Click;
@@ -334,10 +317,9 @@
             btnset.AutoSize = true;
             btnset.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnset.ForeColor = Color.FromArgb(116, 86, 174);
-            btnset.Location = new Point(1241, 760);
-            btnset.Margin = new Padding(4, 0, 4, 0);
+            btnset.Location = new Point(993, 608);
             btnset.Name = "btnset";
-            btnset.Size = new Size(44, 30);
+            btnset.Size = new Size(36, 23);
             btnset.TabIndex = 45;
             btnset.Text = "Set";
             btnset.Click += btnset_Click;
@@ -347,18 +329,17 @@
             lblsettimetable.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblsettimetable.AutoSize = true;
             lblsettimetable.Font = new Font("Nirmala UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblsettimetable.Location = new Point(1098, 760);
-            lblsettimetable.Margin = new Padding(4, 0, 4, 0);
+            lblsettimetable.Location = new Point(879, 608);
             lblsettimetable.Name = "lblsettimetable";
-            lblsettimetable.Size = new Size(150, 30);
+            lblsettimetable.Size = new Size(123, 23);
             lblsettimetable.TabIndex = 44;
             lblsettimetable.Text = "Set TimeTable?";
             // 
             // AddUser
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1582, 865);
+            ClientSize = new Size(1265, 692);
             Controls.Add(btnset);
             Controls.Add(lblsettimetable);
             Controls.Add(LblCross);
@@ -384,7 +365,7 @@
             Controls.Add(lblFirstName);
             Controls.Add(LBLaddTeacher);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2);
+            Margin = new Padding(1);
             Name = "AddUser";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AddUser";

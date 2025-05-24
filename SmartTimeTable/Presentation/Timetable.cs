@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SmartTimeTable.Business;
 using SmartTimeTable.Data;
 
 
@@ -15,6 +16,7 @@ namespace SmartTimeTable.Presentation
 {
     public partial class Timetable : Form
     {
+
         public Timetable()
         {
             InitializeComponent();
@@ -107,9 +109,11 @@ namespace SmartTimeTable.Presentation
             txtStartTime.Clear();
             txtEndTime.Clear();
         }
+        private readonly User _currentUser;
 
         private void btnchecktimetbl_Click(object sender, EventArgs e)
         {
+
             this.Hide();
             new Gridlayout().Show();
         }
