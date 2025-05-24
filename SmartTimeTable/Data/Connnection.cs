@@ -378,7 +378,7 @@ namespace SmartTimeTable.Data
             using (var cmd = conn.CreateCommand())
             {
                 cmd.CommandText = @"
-            SELECT Day, Lecture, CourseCode, CourseName, RoomNumber, StartTime, EndTime, TeacherName
+            SELECT Day, Lecture, CourseCode, CourseName, RoomNumber, StartTime, EndTime
             FROM TimeTables;";
                 using (var rdr = cmd.ExecuteReader())
                 {
