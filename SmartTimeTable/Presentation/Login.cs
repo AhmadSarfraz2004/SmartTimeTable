@@ -27,9 +27,9 @@ namespace SmartTimeTable
                 return;
             }
 
-            // Optional hard‐coded Admin:
+            // Optional hard-coded Admin:
             if (userInput.Equals("Ahmad", StringComparison.OrdinalIgnoreCase)
-             && password == "Password")
+                && password == "Password")
             {
                 Session.CurrentUser = new User
                 {

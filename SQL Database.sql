@@ -46,4 +46,15 @@ SELECT * FROM Students
 SELECT * FROM Teachers
 SELECT * FROM TimeTables
 
+-- Step 1: Delete from child tables
+DELETE FROM Teachers;
+DELETE FROM Students;
+DELETE FROM TimeTables;
+
+-- Step 2: Delete from Users
+DELETE FROM Users;
+
+-- Step 3: Reset identity (if needed)
+DBCC CHECKIDENT ('Users', RESEED, 0);
+
 

@@ -356,15 +356,15 @@ namespace SmartTimeTable.Data
 
         public static DataTable GetTeacherTimeTable()
         {
+            //return dt;
             var dt = new DataTable();
-            // Create the columns: the first column is the day name ("SR#"),
-            // then one column per lecture slot.
+            // Create columns: SR# for day, and one column per lecture slot
             dt.Columns.Add("SR#", typeof(string));
             var lectures = new[] { "1st", "2nd", "3rd", "4th", "5th", "6th" };
             foreach (var lec in lectures)
                 dt.Columns.Add(lec, typeof(string));
 
-            // Seed one row per weekday:
+            // Seed one row per weekday
             var days = new[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
             foreach (var day in days)
             {
@@ -373,13 +373,25 @@ namespace SmartTimeTable.Data
                 dt.Rows.Add(row);
             }
 
-            // Load every entry from TimeTables and slot it
+            // Load timetable entries for the logged-in teacher
             using (var conn = GetConnection())
             using (var cmd = conn.CreateCommand())
             {
                 cmd.CommandText = @"
-            SELECT Day, Lecture, CourseCode, CourseName, RoomNumber, StartTime, EndTime
-            FROM TimeTables;";
+                SELECT 
+                Day, 
+                Lecture, 
+                CourseCode, 
+                CourseName, 
+                Department, 
+                RoomNumber, 
+                StartTime, 
+                EndTime,
+                TeacherName
+                FROM TimeTables
+                WHERE TeacherId = @TeacherId";
+                cmd.Parameters.AddWithValue("@TeacherId", Session.CurrentUser.Id);
+
                 using (var rdr = cmd.ExecuteReader())
                 {
                     while (rdr.Read())
@@ -388,20 +400,25 @@ namespace SmartTimeTable.Data
                         string lecture = rdr.GetString(rdr.GetOrdinal("Lecture"));
                         string courseCode = rdr.GetString(rdr.GetOrdinal("CourseCode"));
                         string courseName = rdr.GetString(rdr.GetOrdinal("CourseName"));
+                        string department = rdr.GetString(rdr.GetOrdinal("Department"));
                         int room = rdr.GetInt32(rdr.GetOrdinal("RoomNumber"));
                         TimeSpan start = rdr.GetTimeSpan(rdr.GetOrdinal("StartTime"));
                         TimeSpan end = rdr.GetTimeSpan(rdr.GetOrdinal("EndTime"));
+                        string teacherName = rdr.GetString(rdr.GetOrdinal("TeacherName"));
+
 
                         string info =
                             $"Course Code: {courseCode}\r\n" +
                             $"Course Name: {courseName}\r\n" +
+                            $"Department: {department}\r\n" +
                             $"Room: {room}\r\n" +
-                            $"StartTime: {start:h\\:mm}\r\n " +
-                            $"EndTime: {end:h\\:mm}\r\n";
+                            $"StartTime: {start:h\\:mm}\r\n" +
+                            $"EndTime: {end:h\\:mm}\r\n" +
+                            $"Teacher: {teacherName}";
 
                         // Find the row for this day
                         var found = dt.Rows.Cast<DataRow>()
-                                          .FirstOrDefault(r => r["SR#"].ToString() == day);
+                                      .FirstOrDefault(r => r["SR#"].ToString() == day);
                         if (found != null && dt.Columns.Contains(lecture))
                         {
                             found[lecture] = info;
