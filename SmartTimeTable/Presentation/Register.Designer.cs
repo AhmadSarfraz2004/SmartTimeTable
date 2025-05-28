@@ -302,7 +302,7 @@
             lblRegister.AutoSize = true;
             lblRegister.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRegister.ForeColor = Color.FromArgb(116, 86, 174);
-            lblRegister.Location = new Point(1089, 693);
+            lblRegister.Location = new Point(1096, 693);
             lblRegister.Name = "lblRegister";
             lblRegister.Size = new Size(55, 23);
             lblRegister.TabIndex = 12;

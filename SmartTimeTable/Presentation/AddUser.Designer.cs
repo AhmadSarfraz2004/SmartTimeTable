@@ -317,7 +317,7 @@
             btnset.AutoSize = true;
             btnset.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnset.ForeColor = Color.FromArgb(116, 86, 174);
-            btnset.Location = new Point(993, 608);
+            btnset.Location = new Point(999, 608);
             btnset.Name = "btnset";
             btnset.Size = new Size(36, 23);
             btnset.TabIndex = 45;

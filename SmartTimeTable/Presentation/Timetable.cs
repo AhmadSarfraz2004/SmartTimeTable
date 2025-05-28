@@ -117,6 +117,12 @@ namespace SmartTimeTable.Presentation
             this.Hide();
             new Gridlayout().Show();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new AddUser().Show();
+        }
     }
 }
 

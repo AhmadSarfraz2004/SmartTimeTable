@@ -57,6 +57,7 @@
             lbltimetbl = new Label();
             lblLecture = new Label();
             cmbLecture = new ComboBox();
+            btnBack = new Label();
             SuspendLayout();
             // 
             // LBLTimetable
@@ -65,9 +66,9 @@
             LBLTimetable.AutoSize = true;
             LBLTimetable.Font = new Font("Nirmala UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLTimetable.ForeColor = Color.FromArgb(116, 86, 174);
-            LBLTimetable.Location = new Point(399, 31);
+            LBLTimetable.Location = new Point(456, 41);
             LBLTimetable.Name = "LBLTimetable";
-            LBLTimetable.Size = new Size(305, 51);
+            LBLTimetable.Size = new Size(374, 62);
             LBLTimetable.TabIndex = 0;
             LBLTimetable.Text = "Timetable Form";
             // 
@@ -77,9 +78,9 @@
             LBLteacherName.AutoSize = true;
             LBLteacherName.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLteacherName.ForeColor = Color.Gray;
-            LBLteacherName.Location = new Point(60, 95);
+            LBLteacherName.Location = new Point(69, 127);
             LBLteacherName.Name = "LBLteacherName";
-            LBLteacherName.Size = new Size(118, 21);
+            LBLteacherName.Size = new Size(147, 28);
             LBLteacherName.TabIndex = 0;
             LBLteacherName.Text = "Teacher Name";
             // 
@@ -89,9 +90,9 @@
             LBLteacherID.AutoSize = true;
             LBLteacherID.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLteacherID.ForeColor = Color.Gray;
-            LBLteacherID.Location = new Point(407, 95);
+            LBLteacherID.Location = new Point(465, 127);
             LBLteacherID.Name = "LBLteacherID";
-            LBLteacherID.Size = new Size(89, 21);
+            LBLteacherID.Size = new Size(112, 28);
             LBLteacherID.TabIndex = 0;
             LBLteacherID.Text = "Teacher ID";
             // 
@@ -99,11 +100,10 @@
             // 
             txtTeacherID.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtTeacherID.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtTeacherID.Location = new Point(412, 120);
-            txtTeacherID.Margin = new Padding(3, 2, 3, 2);
+            txtTeacherID.Location = new Point(471, 160);
             txtTeacherID.Multiline = true;
             txtTeacherID.Name = "txtTeacherID";
-            txtTeacherID.Size = new Size(297, 29);
+            txtTeacherID.Size = new Size(339, 37);
             txtTeacherID.TabIndex = 31;
             // 
             // LBLDept
@@ -112,9 +112,9 @@
             LBLDept.AutoSize = true;
             LBLDept.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLDept.ForeColor = Color.Gray;
-            LBLDept.Location = new Point(776, 95);
+            LBLDept.Location = new Point(887, 127);
             LBLDept.Name = "LBLDept";
-            LBLDept.Size = new Size(102, 21);
+            LBLDept.Size = new Size(127, 28);
             LBLDept.TabIndex = 0;
             LBLDept.Text = "Department";
             // 
@@ -122,11 +122,10 @@
             // 
             txtDept.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtDept.Font = new Font("Nirmala UI", 12F);
-            txtDept.Location = new Point(780, 120);
-            txtDept.Margin = new Padding(3, 2, 3, 2);
+            txtDept.Location = new Point(891, 160);
             txtDept.Multiline = true;
             txtDept.Name = "txtDept";
-            txtDept.Size = new Size(276, 29);
+            txtDept.Size = new Size(315, 37);
             txtDept.TabIndex = 32;
             // 
             // LBLDate
@@ -135,9 +134,9 @@
             LBLDate.AutoSize = true;
             LBLDate.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLDate.ForeColor = Color.Gray;
-            LBLDate.Location = new Point(60, 194);
+            LBLDate.Location = new Point(69, 259);
             LBLDate.Name = "LBLDate";
-            LBLDate.Size = new Size(158, 21);
+            LBLDate.Size = new Size(197, 28);
             LBLDate.TabIndex = 0;
             LBLDate.Text = "Date (MM-DD-YYY)";
             // 
@@ -147,9 +146,9 @@
             LBLDay.AutoSize = true;
             LBLDay.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLDay.ForeColor = Color.Gray;
-            LBLDay.Location = new Point(405, 194);
+            LBLDay.Location = new Point(463, 259);
             LBLDay.Name = "LBLDay";
-            LBLDay.Size = new Size(40, 21);
+            LBLDay.Size = new Size(49, 28);
             LBLDay.TabIndex = 0;
             LBLDay.Text = "Day";
             // 
@@ -159,9 +158,9 @@
             LBLroomNumber.AutoSize = true;
             LBLroomNumber.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLroomNumber.ForeColor = Color.Gray;
-            LBLroomNumber.Location = new Point(776, 194);
+            LBLroomNumber.Location = new Point(887, 259);
             LBLroomNumber.Name = "LBLroomNumber";
-            LBLroomNumber.Size = new Size(122, 21);
+            LBLroomNumber.Size = new Size(149, 28);
             LBLroomNumber.TabIndex = 0;
             LBLroomNumber.Text = "Room Number";
             // 
@@ -169,11 +168,10 @@
             // 
             txtRoomNumber.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtRoomNumber.Font = new Font("Nirmala UI", 12F);
-            txtRoomNumber.Location = new Point(780, 220);
-            txtRoomNumber.Margin = new Padding(3, 2, 3, 2);
+            txtRoomNumber.Location = new Point(891, 293);
             txtRoomNumber.Multiline = true;
             txtRoomNumber.Name = "txtRoomNumber";
-            txtRoomNumber.Size = new Size(276, 29);
+            txtRoomNumber.Size = new Size(315, 37);
             txtRoomNumber.TabIndex = 35;
             // 
             // LBLcourseName
@@ -182,9 +180,9 @@
             LBLcourseName.AutoSize = true;
             LBLcourseName.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLcourseName.ForeColor = Color.Gray;
-            LBLcourseName.Location = new Point(60, 280);
+            LBLcourseName.Location = new Point(69, 373);
             LBLcourseName.Name = "LBLcourseName";
-            LBLcourseName.Size = new Size(112, 21);
+            LBLcourseName.Size = new Size(138, 28);
             LBLcourseName.TabIndex = 0;
             LBLcourseName.Text = "Course Name";
             // 
@@ -192,11 +190,10 @@
             // 
             txtCourseName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtCourseName.Font = new Font("Nirmala UI", 12F);
-            txtCourseName.Location = new Point(64, 305);
-            txtCourseName.Margin = new Padding(3, 2, 3, 2);
+            txtCourseName.Location = new Point(73, 407);
             txtCourseName.Multiline = true;
             txtCourseName.Name = "txtCourseName";
-            txtCourseName.Size = new Size(645, 29);
+            txtCourseName.Size = new Size(737, 37);
             txtCourseName.TabIndex = 36;
             // 
             // LBLcourseCode
@@ -205,9 +202,9 @@
             LBLcourseCode.AutoSize = true;
             LBLcourseCode.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLcourseCode.ForeColor = Color.Gray;
-            LBLcourseCode.Location = new Point(776, 280);
+            LBLcourseCode.Location = new Point(887, 373);
             LBLcourseCode.Name = "LBLcourseCode";
-            LBLcourseCode.Size = new Size(105, 21);
+            LBLcourseCode.Size = new Size(129, 28);
             LBLcourseCode.TabIndex = 0;
             LBLcourseCode.Text = "Course Code";
             // 
@@ -215,11 +212,10 @@
             // 
             txtCourseCode.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtCourseCode.Font = new Font("Nirmala UI", 12F);
-            txtCourseCode.Location = new Point(780, 305);
-            txtCourseCode.Margin = new Padding(3, 2, 3, 2);
+            txtCourseCode.Location = new Point(891, 407);
             txtCourseCode.Multiline = true;
             txtCourseCode.Name = "txtCourseCode";
-            txtCourseCode.Size = new Size(276, 29);
+            txtCourseCode.Size = new Size(315, 37);
             txtCourseCode.TabIndex = 37;
             txtCourseCode.TextChanged += textBox1_TextChanged;
             // 
@@ -229,9 +225,9 @@
             LBLstartTime.AutoSize = true;
             LBLstartTime.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLstartTime.ForeColor = Color.Gray;
-            LBLstartTime.Location = new Point(432, 378);
+            LBLstartTime.Location = new Point(494, 504);
             LBLstartTime.Name = "LBLstartTime";
-            LBLstartTime.Size = new Size(147, 21);
+            LBLstartTime.Size = new Size(187, 28);
             LBLstartTime.TabIndex = 0;
             LBLstartTime.Text = "Lecture Start Time";
             // 
@@ -239,11 +235,10 @@
             // 
             txtStartTime.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtStartTime.Font = new Font("Nirmala UI", 12F);
-            txtStartTime.Location = new Point(435, 403);
-            txtStartTime.Margin = new Padding(3, 2, 3, 2);
+            txtStartTime.Location = new Point(497, 537);
             txtStartTime.Multiline = true;
             txtStartTime.Name = "txtStartTime";
-            txtStartTime.Size = new Size(269, 29);
+            txtStartTime.Size = new Size(307, 37);
             txtStartTime.TabIndex = 39;
             // 
             // LBLendTime
@@ -252,9 +247,9 @@
             LBLendTime.AutoSize = true;
             LBLendTime.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLendTime.ForeColor = Color.Gray;
-            LBLendTime.Location = new Point(780, 378);
+            LBLendTime.Location = new Point(891, 504);
             LBLendTime.Name = "LBLendTime";
-            LBLendTime.Size = new Size(141, 21);
+            LBLendTime.Size = new Size(176, 28);
             LBLendTime.TabIndex = 0;
             LBLendTime.Text = "Lecture End Time";
             // 
@@ -262,11 +257,10 @@
             // 
             txtEndTime.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txtEndTime.Font = new Font("Nirmala UI", 12F);
-            txtEndTime.Location = new Point(780, 403);
-            txtEndTime.Margin = new Padding(3, 2, 3, 2);
+            txtEndTime.Location = new Point(891, 537);
             txtEndTime.Multiline = true;
             txtEndTime.Name = "txtEndTime";
-            txtEndTime.Size = new Size(276, 29);
+            txtEndTime.Size = new Size(315, 37);
             txtEndTime.TabIndex = 40;
             // 
             // BtnClear
@@ -276,10 +270,9 @@
             BtnClear.FlatStyle = FlatStyle.Flat;
             BtnClear.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnClear.ForeColor = Color.FromArgb(116, 86, 174);
-            BtnClear.Location = new Point(874, 455);
-            BtnClear.Margin = new Padding(3, 2, 3, 2);
+            BtnClear.Location = new Point(999, 607);
             BtnClear.Name = "BtnClear";
-            BtnClear.Size = new Size(181, 43);
+            BtnClear.Size = new Size(207, 57);
             BtnClear.TabIndex = 42;
             BtnClear.Text = "CLEAR";
             BtnClear.UseVisualStyleBackColor = false;
@@ -292,10 +285,9 @@
             btnSubmit.FlatStyle = FlatStyle.Flat;
             btnSubmit.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(652, 455);
-            btnSubmit.Margin = new Padding(3, 2, 3, 2);
+            btnSubmit.Location = new Point(745, 607);
             btnSubmit.Name = "btnSubmit";
-            btnSubmit.Size = new Size(181, 43);
+            btnSubmit.Size = new Size(207, 57);
             btnSubmit.TabIndex = 41;
             btnSubmit.Text = "SUBMIT";
             btnSubmit.UseVisualStyleBackColor = false;
@@ -305,20 +297,20 @@
             // 
             cmbTeacherName.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbTeacherName.FormattingEnabled = true;
-            cmbTeacherName.Location = new Point(64, 120);
-            cmbTeacherName.Margin = new Padding(2, 2, 2, 2);
+            cmbTeacherName.Location = new Point(73, 160);
+            cmbTeacherName.Margin = new Padding(2, 3, 2, 3);
             cmbTeacherName.Name = "cmbTeacherName";
-            cmbTeacherName.Size = new Size(270, 29);
+            cmbTeacherName.Size = new Size(308, 36);
             cmbTeacherName.TabIndex = 30;
             cmbTeacherName.SelectedIndexChanged += cmbTeacherName_SelectedIndexChanged;
             // 
             // dtpDate
             // 
             dtpDate.Font = new Font("Nirmala UI", 12F);
-            dtpDate.Location = new Point(64, 221);
-            dtpDate.Margin = new Padding(2, 2, 2, 2);
+            dtpDate.Location = new Point(73, 295);
+            dtpDate.Margin = new Padding(2, 3, 2, 3);
             dtpDate.Name = "dtpDate";
-            dtpDate.Size = new Size(270, 29);
+            dtpDate.Size = new Size(308, 34);
             dtpDate.TabIndex = 42;
             // 
             // LblCross
@@ -326,9 +318,9 @@
             LblCross.AutoSize = true;
             LblCross.BackColor = Color.Red;
             LblCross.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LblCross.Location = new Point(1094, 12);
+            LblCross.Location = new Point(1250, 16);
             LblCross.Name = "LblCross";
-            LblCross.Size = new Size(19, 21);
+            LblCross.Size = new Size(24, 28);
             LblCross.TabIndex = 0;
             LblCross.Text = "X";
             LblCross.Click += LblCross_Click;
@@ -338,10 +330,10 @@
             cmbDay.Font = new Font("Nirmala UI", 12F);
             cmbDay.FormattingEnabled = true;
             cmbDay.Items.AddRange(new object[] { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" });
-            cmbDay.Location = new Point(412, 222);
-            cmbDay.Margin = new Padding(2, 2, 2, 2);
+            cmbDay.Location = new Point(471, 296);
+            cmbDay.Margin = new Padding(2, 3, 2, 3);
             cmbDay.Name = "cmbDay";
-            cmbDay.Size = new Size(297, 29);
+            cmbDay.Size = new Size(339, 36);
             cmbDay.TabIndex = 30;
             cmbDay.SelectedIndexChanged += cmbTeacherName_SelectedIndexChanged;
             // 
@@ -351,9 +343,9 @@
             btnchecktimetbl.AutoSize = true;
             btnchecktimetbl.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnchecktimetbl.ForeColor = Color.FromArgb(116, 86, 174);
-            btnchecktimetbl.Location = new Point(863, 515);
+            btnchecktimetbl.Location = new Point(994, 687);
             btnchecktimetbl.Name = "btnchecktimetbl";
-            btnchecktimetbl.Size = new Size(49, 19);
+            btnchecktimetbl.Size = new Size(58, 23);
             btnchecktimetbl.TabIndex = 43;
             btnchecktimetbl.Text = "Check";
             btnchecktimetbl.Click += btnchecktimetbl_Click;
@@ -363,9 +355,9 @@
             lbltimetbl.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbltimetbl.AutoSize = true;
             lbltimetbl.Font = new Font("Nirmala UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbltimetbl.Location = new Point(745, 515);
+            lbltimetbl.Location = new Point(851, 687);
             lbltimetbl.Name = "lbltimetbl";
-            lbltimetbl.Size = new Size(116, 19);
+            lbltimetbl.Size = new Size(145, 23);
             lbltimetbl.TabIndex = 0;
             lbltimetbl.Text = "Check TimeTable?";
             // 
@@ -375,9 +367,9 @@
             lblLecture.AutoSize = true;
             lblLecture.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLecture.ForeColor = Color.Gray;
-            lblLecture.Location = new Point(64, 378);
+            lblLecture.Location = new Point(73, 504);
             lblLecture.Name = "lblLecture";
-            lblLecture.Size = new Size(66, 21);
+            lblLecture.Size = new Size(82, 28);
             lblLecture.TabIndex = 0;
             lblLecture.Text = "Lecture";
             // 
@@ -386,18 +378,31 @@
             cmbLecture.Font = new Font("Nirmala UI", 12F);
             cmbLecture.FormattingEnabled = true;
             cmbLecture.Items.AddRange(new object[] { "1st", "2nd", "3rd", "4th", "5th", "6th" });
-            cmbLecture.Location = new Point(64, 403);
-            cmbLecture.Margin = new Padding(2, 2, 2, 2);
+            cmbLecture.Location = new Point(73, 537);
+            cmbLecture.Margin = new Padding(2, 3, 2, 3);
             cmbLecture.Name = "cmbLecture";
-            cmbLecture.Size = new Size(297, 29);
+            cmbLecture.Size = new Size(339, 36);
             cmbLecture.TabIndex = 38;
             cmbLecture.SelectedIndexChanged += cmbTeacherName_SelectedIndexChanged;
             // 
+            // btnBack
+            // 
+            btnBack.AutoSize = true;
+            btnBack.Font = new Font("Nirmala UI", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBack.ForeColor = Color.FromArgb(116, 86, 174);
+            btnBack.Location = new Point(57, 31);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(59, 62);
+            btnBack.TabIndex = 44;
+            btnBack.Text = "⮌\t";
+            btnBack.Click += btnBack_Click;
+            // 
             // Timetable
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1123, 553);
+            ClientSize = new Size(1283, 737);
+            Controls.Add(btnBack);
             Controls.Add(btnchecktimetbl);
             Controls.Add(lbltimetbl);
             Controls.Add(LblCross);
@@ -427,7 +432,6 @@
             Controls.Add(LBLteacherName);
             Controls.Add(LBLTimetable);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Timetable";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Timetable";
@@ -467,5 +471,6 @@
         private Label lbltimetbl;
         private Label lblLecture;
         private ComboBox cmbLecture;
+        private Label btnBack;
     }
 }

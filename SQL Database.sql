@@ -6,7 +6,7 @@ CREATE TABLE Users (
     Email        NVARCHAR(100) NOT NULL UNIQUE,
     Department   NVARCHAR(100) NOT NULL,
     Role         NVARCHAR(50)  NOT NULL,     -- e.g. 'Student', 'Teacher', 'Admin'
-    Password     NVARCHAR(256) NOT NULL,     -- consider hashing+salt; avoid plain text
+    Password     NVARCHAR(256) NOT NULL,     
     DateOfBirth  DATE          NULL
 );
 
@@ -56,5 +56,6 @@ DELETE FROM Users;
 
 -- Step 3: Reset identity (if needed)
 DBCC CHECKIDENT ('Users', RESEED, 0);
+DBCC CHECKIDENT ('TimeTables', RESEED, 0);
 
 

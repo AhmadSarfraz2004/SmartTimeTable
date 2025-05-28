@@ -130,7 +130,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(116, 86, 174);
-            label5.Location = new Point(331, 612);
+            label5.Location = new Point(341, 612);
             label5.Name = "label5";
             label5.Size = new Size(76, 23);
             label5.TabIndex = 18;

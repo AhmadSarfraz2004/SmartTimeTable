@@ -28,12 +28,12 @@ namespace SmartTimeTable
             }
 
             // Optional hard-coded Admin:
-            if (userInput.Equals("Ahmad", StringComparison.OrdinalIgnoreCase)
+            if (userInput.Equals("Admin", StringComparison.OrdinalIgnoreCase)
                 && password == "Password")
             {
                 Session.CurrentUser = new User
                 {
-                    FirstName = "Ahmad",
+                    FirstName = "Admin",
                     Role = "Admin"
                 };
 
